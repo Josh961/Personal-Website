@@ -1,0 +1,179 @@
+/* ========================================================
+   Animations
+   ======================================================== */
+
+@keyframes fade-in-bottom { 
+  from { 
+    transform: translateY(50px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+}
+
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-50px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================================
+   Main Navigation Bar
+   ======================================================== */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin: 0 auto;
+  padding-top: 45px;
+  background: #fff;
+}
+
+/* Header Section
+   ======================================================== */
+
+/**
+ * Site logo to be displayed on all pages, including mobile.
+ *
+ * 1. Gradient background to style the height of pink color.
+ */
+.nav-header {
+  padding: 0px 10px;
+  background: linear-gradient(180deg, #fff 52%, $pink 52%, $pink 72%, #fff 72%); // 1
+
+  &-fade {
+    opacity: 0;
+    animation: fade-in-bottom 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: $font-stack-bold;
+
+    @include for-phone-only() {
+      font-size: 26px;
+    }
+
+    @include for-tablet-portrait-up() {
+      font-size: 48px;
+    }
+
+    @include for-tablet-landscape-up() {
+      font-size: 28px;
+    }
+
+    @include for-small-desktop-up() {
+      font-size: 36px;
+    }
+
+    @include for-medium-desktop-up() {
+      font-size: 42px;
+    }
+
+    @include for-large-desktop-up() {
+      font-size: 48px;
+    }
+    
+    span {
+      font-family: $font-stack;
+      font-weight: normal;
+    }
+  }
+}
+
+/* Links Section
+   ======================================================== */
+
+/**
+ * The div holding all the links. If screen is large enough, the
+ * menu icon will be removed.
+ */
+.nav-section {
+  display: inline-block;
+
+  @include for-tablet-landscape-up() {
+    .mobile-menu {
+      display: none;
+    }
+  }
+
+  &-fade {
+    opacity: 0;
+    animation: fade-in-left 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+}
+
+/**
+ * Navigation links that will not be displayed on mobile. Once
+ * the minimum breakpoint is hit, they will be displayed inline.
+ */
+.nav-link {
+  display: none;
+  position: relative;
+  padding: 0 10px;
+  color: #333;
+  font-family: $font-stack;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  animation: fade-in-bottom 2s;
+  animation-fill-mode: forwards;
+
+  @include for-tablet-landscape-up() {
+    display: inline;
+    margin-left:  15px;
+    font-size: 20px;
+  }
+
+  @include for-small-desktop-up() {
+    margin-left: 25px;
+    font-size: 26px;
+  }
+
+  @include for-medium-desktop-up() {
+    margin-left: 40px;
+    font-size: 32px;
+  }
+
+  @include for-large-desktop-up() {
+    margin-left: 65px;
+    font-size: 36px;
+  }
+
+  &:not(.selected)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, #fff 55%, $green 55%, $green 71%, #fff 71%);
+    opacity: 0;
+    transform: translateX(-35%);
+    transition: 300ms ease;
+    transition-property: opacity, transform;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/** 
+ * Current selected page.
+ */
+.selected {
+  background: linear-gradient(180deg, #fff 55%, $green 55%, $green 71%, #fff 71%);
+}
