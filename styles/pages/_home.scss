@@ -7,7 +7,6 @@
  * below that breakpoint only "Josh" will be displayed.
  */
 .home {
-  height: 100vh;
   background-image: url("../images/josh.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +43,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
 
   @include for-tablet-landscape-up() {
     display: none;
@@ -68,10 +66,10 @@
  * Social links that will not be displayed unless the screen
  * size is large enough.
  *
- * 1. Closest to best position in canvas
- * 2. Closest to best position in canvas
+ * 1. Closest to best position on canvas.
+ * 2. Closest to best position on canvas.
  */
-.home-social-links {
+.home-social-links-wrapper {
   display: none;
 
   @include for-tablet-landscape-up() {
@@ -86,26 +84,24 @@
 /**
  * Div containing the social media logo and link.
  *
- * 1. Dynamic sizing for font
- * 2. Dynamic sizing for svg
+ * 1. Dynamic sizing for svg.
+ * 2. Dynamic sizing for font.
  */
 .home-social-link-item {
   margin-bottom: 30px;
 
-  a {
-    color: #333;
-    font-size: 1.2vw; // 1
-    text-decoration: none;
+  .image {
+    width: 5vh; // 1
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  > .link {
+    font-size: 1.2vw; // 2
     transition: opacity 400ms ease;
 
     &:hover {
       opacity: .6;
     }
-  }
-
-  img {
-    width: 5vh; // 2
-    margin-right: 10px;
-    vertical-align: middle;
-  }
+  } 
 }

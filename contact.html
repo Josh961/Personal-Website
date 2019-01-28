@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Contact - Joshua Zinkovsky</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-header">
+      <h1>
+        <a href="index.html"><span>Joshua </span>Zinkovsky</a>
+      </h1>
+    </div>
+    <div class="nav-section">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="design.html">Design</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link selected" href="contact.html">Contact</a>
+      <a class="mobile-menu" href="javascript:void(0);">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="grid-container -centered">
+      <div class="grid-item-left">
+        <div class="contact-item">
+          <img class="image" src="images/pin.svg" alt="Location Pin">
+          <div class="info">
+            <h3 class="header">Address</h3>
+            <span>Pittsburgh, PA</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img class="image" src="images/mail.svg" alt="Email">
+          <div class="info">
+            <h3 class="header">Email</h3>
+            <span>joshua.zky@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item-right">
+        <form class="contact-form" action="https://formspree.io/joshua.zky@gmail.com" method="POST">
+          <input class="field" type="text" name="name" placeholder="Name" required>
+          <input class="field" type="email" name="_replyto" placeholder="Email" required>
+          <textarea class="field text" type="textarea" name="message" placeholder="Message..." required></textarea>
+          <input class="submit" type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+      <div class="footer-item">
+        <a class="link" href="https://github.com/Josh961" target="_blank">
+          <img class="image" src="images/github.svg" alt="GitHub">GitHub
+        </a>
+      </div>
+      <div class="footer-item">
+        <a class="link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
+          <img class="image" src="images/linkedin.svg" alt="LinkedIn">LinkedIn
+        </a>
+      </div>
+    </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

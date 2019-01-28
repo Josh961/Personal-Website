@@ -1,0 +1,32 @@
+/* ========================================================
+   Site Footer
+   ======================================================== */
+
+.site-footer {
+  display: flex;
+  height: 150px;
+  border-top: 1px solid #999;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-item {
+  margin-right: 25px;
+  margin-left: 25px;
+  
+  .image {
+    height: 45px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  > .link {
+    font-size: 24px;
+    transition: opacity 400ms ease;
+    transform: translateY(50%); 
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

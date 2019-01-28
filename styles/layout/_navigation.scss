@@ -44,9 +44,9 @@
  */
 .nav-header {
   padding: 0px 10px;
-  background: linear-gradient(180deg, #fff 52%, $pink 52%, $pink 72%, #fff 72%); // 1
+  background: linear-gradient(180deg, #fff 52%, $dark-pink 52%, $dark-pink 72%, #fff 72%); // 1
 
-  &-fade {
+  &.-fade {
     opacity: 0;
     animation: fade-in-bottom 2s;
     animation-fill-mode: forwards;
@@ -104,7 +104,7 @@
     }
   }
 
-  &-fade {
+  &.-fade {
     opacity: 0;
     animation: fade-in-left 2s;
     animation-fill-mode: forwards;
@@ -115,15 +115,14 @@
 /**
  * Navigation links that will not be displayed on mobile. Once
  * the minimum breakpoint is hit, they will be displayed inline.
+ *
+ * 1. Gradient background to be faded in on hover.
  */
 .nav-link {
   display: none;
   position: relative;
   padding: 0 10px;
-  color: #333;
   font-family: $font-stack;
-  outline: none;
-  text-decoration: none;
   user-select: none;
   animation: fade-in-bottom 2s;
   animation-fill-mode: forwards;
@@ -148,7 +147,8 @@
     margin-left: 65px;
     font-size: 36px;
   }
-
+  
+  // 1
   &:not(.selected)::before {
     content: "";
     position: absolute;
@@ -157,7 +157,7 @@
     left: 0;
     bottom: 0;
     z-index: -1;
-    background: linear-gradient(180deg, #fff 55%, $green 55%, $green 71%, #fff 71%);
+    background: linear-gradient(180deg, #fff 55%, $pink 55%, $pink 71%, #fff 71%);
     opacity: 0;
     transform: translateX(-35%);
     transition: 300ms ease;
@@ -175,5 +175,5 @@
  * Current selected page.
  */
 .selected {
-  background: linear-gradient(180deg, #fff 55%, $green 55%, $green 71%, #fff 71%);
+  background: linear-gradient(180deg, #fff 55%, $pink 55%, $pink 71%, #fff 71%);
 }

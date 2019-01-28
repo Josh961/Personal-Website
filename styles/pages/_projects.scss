@@ -1,0 +1,79 @@
+/* ========================================================
+   Project Item
+   ======================================================== */
+
+.project-item {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  > .header {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 42px;
+    border-bottom: 3px solid $blue;
+  
+    &:hover {
+      background: $blue;
+    }
+  }
+
+  .image {
+    display: inline-block;
+    height: auto;
+    width: 90%;
+    transition: opacity 300ms ease;
+  
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  > .info {
+    width: 70%;
+    margin: 40px auto;
+    text-align: left;
+  }
+
+  .link {
+    padding: 0 2px;
+    border-bottom: 3px solid $blue;
+  
+    &.-large {
+      font-size: 22px;
+    }
+  
+    &:hover {
+      background: $blue;
+    }
+  }
+}
+
+/* ========================================================
+   Project Separator
+   ======================================================== */
+
+.separator {
+  margin: 200px 0;
+  transform: rotate(10deg);
+
+  &.-flipped {
+    transform: rotate(-10deg);
+  }
+
+  > .line {
+    border: 5px solid;
+  
+    &.-blue {
+      color: $blue;
+    }
+  
+    &.-pink {
+      color: $pink;
+    }
+  
+    &.-green {
+      color: $green;
+    }
+  }
+}

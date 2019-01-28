@@ -344,10 +344,94 @@ template {
   display: none;
 }
 
+/* ========================================================
+   Sitewide Tag Styling
+   ======================================================== */
 body {
+  min-height: 100vh;
   margin: 0;
   color: #333;
   font-family: Segoe UI, Arial, Helvetica, sans-serif;
+}
+
+/**
+ * If the page is too short to put the footer on the bottom,
+ * make the minimum height for 'main' the entire view height - 
+ * (navigation height + top margin container height + footer height).
+ * In this case: 100vh - (105px + 100px + 150px).
+ */
+main {
+  min-height: calc(100vh - 255px);
+}
+
+a {
+  color: #333;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  word-spacing: .1em;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* ========================================================
+   Containers and Grids
+   ======================================================== */
+.container {
+  max-width: 900px;
+  padding: 0 10px;
+  margin: 100px auto 200px auto;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "left left" "right right";
+  max-width: 900px;
+  padding: 0 10px;
+  margin: 100px auto 200px auto;
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+        grid-template-areas: "left right";
+    width: 100%;
+  }
+  .grid-container.-centered {
+    position: absolute;
+    margin: 0;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.grid-item-left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: left;
+  margin-bottom: 20px;
+}
+
+.grid-item-right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: right;
 }
 
 /* ========================================================
@@ -432,7 +516,7 @@ body {
   background: linear-gradient(180deg, #fff 52%, #f5afbd 52%, #f5afbd 72%, #fff 72%);
 }
 
-.nav-header-fade {
+.nav-header.-fade {
   opacity: 0;
   -webkit-animation: fade-in-bottom 2s;
           animation: fade-in-bottom 2s;
@@ -504,7 +588,7 @@ body {
   }
 }
 
-.nav-section-fade {
+.nav-section.-fade {
   opacity: 0;
   -webkit-animation: fade-in-left 2s;
           animation: fade-in-left 2s;
@@ -517,15 +601,14 @@ body {
 /**
  * Navigation links that will not be displayed on mobile. Once
  * the minimum breakpoint is hit, they will be displayed inline.
+ *
+ * 1. Gradient background to be faded in on hover.
  */
 .nav-link {
   display: none;
   position: relative;
   padding: 0 10px;
-  color: #333;
   font-family: Segoe UI, Arial, Helvetica, sans-serif;
-  outline: none;
-  text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -573,8 +656,8 @@ body {
   left: 0;
   bottom: 0;
   z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), color-stop(55%, #d7ebcf), color-stop(71%, #d7ebcf), color-stop(71%, #fff));
-  background: linear-gradient(180deg, #fff 55%, #d7ebcf 55%, #d7ebcf 71%, #fff 71%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), color-stop(55%, #f9cdd7), color-stop(71%, #f9cdd7), color-stop(71%, #fff));
+  background: linear-gradient(180deg, #fff 55%, #f9cdd7 55%, #f9cdd7 71%, #fff 71%);
   opacity: 0;
   -webkit-transform: translateX(-35%);
           transform: translateX(-35%);
@@ -597,8 +680,48 @@ body {
  * Current selected page.
  */
 .selected {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), color-stop(55%, #d7ebcf), color-stop(71%, #d7ebcf), color-stop(71%, #fff));
-  background: linear-gradient(180deg, #fff 55%, #d7ebcf 55%, #d7ebcf 71%, #fff 71%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%, #fff), color-stop(55%, #f9cdd7), color-stop(71%, #f9cdd7), color-stop(71%, #fff));
+  background: linear-gradient(180deg, #fff 55%, #f9cdd7 55%, #f9cdd7 71%, #fff 71%);
+}
+
+/* ========================================================
+   Site Footer
+   ======================================================== */
+.site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  border-top: 1px solid #999;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-item {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.footer-item .image {
+  height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-item > .link {
+  font-size: 24px;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.footer-item > .link:hover {
+  opacity: .6;
 }
 
 /* ========================================================
@@ -609,7 +732,6 @@ body {
  * below that breakpoint only "Josh" will be displayed.
  */
 .home {
-  height: 100vh;
   background-image: url("../images/josh.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -681,15 +803,15 @@ body {
  * Social links that will not be displayed unless the screen
  * size is large enough.
  *
- * 1. Closest to best position in canvas
- * 2. Closest to best position in canvas
+ * 1. Closest to best position on canvas.
+ * 2. Closest to best position on canvas.
  */
-.home-social-links {
+.home-social-links-wrapper {
   display: none;
 }
 
 @media (min-width: 900px) {
-  .home-social-links {
+  .home-social-links-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -706,28 +828,177 @@ body {
 /**
  * Div containing the social media logo and link.
  *
- * 1. Dynamic sizing for font
- * 2. Dynamic sizing for svg
+ * 1. Dynamic sizing for svg.
+ * 2. Dynamic sizing for font.
  */
 .home-social-link-item {
   margin-bottom: 30px;
 }
 
-.home-social-link-item a {
-  color: #333;
+.home-social-link-item .image {
+  width: 5vh;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.home-social-link-item > .link {
   font-size: 1.2vw;
-  text-decoration: none;
   -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
 }
 
-.home-social-link-item a:hover {
+.home-social-link-item > .link:hover {
   opacity: .6;
 }
 
-.home-social-link-item img {
-  width: 5vh;
-  margin-right: 10px;
-  vertical-align: middle;
+/* ========================================================
+   Project Item
+   ======================================================== */
+.project-item {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-item > .header {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 42px;
+  border-bottom: 3px solid #c7e9f3;
+}
+
+.project-item > .header:hover {
+  background: #c7e9f3;
+}
+
+.project-item .image {
+  display: inline-block;
+  height: auto;
+  width: 90%;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.project-item .image:hover {
+  opacity: 0.7;
+}
+
+.project-item > .info {
+  width: 70%;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.project-item .link {
+  padding: 0 2px;
+  border-bottom: 3px solid #c7e9f3;
+}
+
+.project-item .link.-large {
+  font-size: 22px;
+}
+
+.project-item .link:hover {
+  background: #c7e9f3;
+}
+
+/* ========================================================
+   Project Separator
+   ======================================================== */
+.separator {
+  margin: 200px 0;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.separator.-flipped {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.separator > .line {
+  border: 5px solid;
+}
+
+.separator > .line.-blue {
+  color: #c7e9f3;
+}
+
+.separator > .line.-pink {
+  color: #f9cdd7;
+}
+
+.separator > .line.-green {
+  color: #d7ebcf;
+}
+
+/* ========================================================
+   Contact Information
+   ======================================================== */
+.contact-item {
+  margin-bottom: 30px;
+}
+
+.contact-item > .image {
+  height: 55px;
+}
+
+.contact-item > .info {
+  display: inline-block;
+  margin-left: 25px;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+/* ========================================================
+   Contact Form
+   ======================================================== */
+.contact-form > .field {
+  display: block;
+  width: 70%;
+  padding: 14px 24px;
+  margin: 20px auto;
+  border: 2px solid #f9cdd7;
+  border-radius: 24px;
+  -webkit-transition: -webkit-box-shadow 300ms ease-out;
+  transition: -webkit-box-shadow 300ms ease-out;
+  transition: box-shadow 300ms ease-out;
+  transition: box-shadow 300ms ease-out, -webkit-box-shadow 300ms ease-out;
+  resize: none;
+}
+
+.contact-form > .field:first-child {
+  margin-top: 10px;
+}
+
+.contact-form > .field:focus {
+  -webkit-box-shadow: 0 0 6px #f5afbd;
+          box-shadow: 0 0 6px #f5afbd;
+}
+
+.contact-form > .text {
+  height: 125px;
+}
+
+.contact-form > .submit {
+  display: block;
+  padding: 10px 80px;
+  margin: 0 auto;
+  color: #fff;
+  background: #f9cdd7;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #f9cdd7;
+  border-radius: 20px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  -webkit-transition-property: background, border;
+  transition-property: background, border;
+}
+
+.contact-form > .submit:hover {
+  background: #f5afbd;
+  border: 1px solid #f5afbd;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,85 @@
+/* ========================================================
+   Sitewide Tag Styling
+   ======================================================== */
+
 body {
+  min-height: 100vh;
   margin: 0;
   color: #333;
   font-family: $font-stack;
 }
+
+/**
+ * If the page is too short to put the footer on the bottom,
+ * make the minimum height for 'main' the entire view height - 
+ * (navigation height + top margin container height + footer height).
+ * In this case: 100vh - (105px + 100px + 150px).
+ */
+main {
+  min-height: calc(100vh - 255px);
+}
+
+a {
+  color: #333;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  word-spacing: .1em;
+}
+
+img {
+  user-select: none;
+}
+
+/* ========================================================
+   Containers and Grids
+   ======================================================== */
+
+.container {
+  max-width: 900px;
+  padding: 0 10px;
+  margin: 100px auto 200px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "left left"
+    "right right";
+
+  max-width: 900px;
+  padding: 0 10px;
+  margin: 100px auto 200px auto;
+
+  @include for-tablet-landscape-up() {
+    grid-template-areas:
+      "left right";
+    
+    width: 100%;
+
+    &.-centered {
+      position: absolute;
+      margin: 0;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.grid-item-left {
+  grid-area: left;
+  margin-bottom: 20px;
+}
+
+.grid-item-right {
+  grid-area: right;
+}
+
+  
