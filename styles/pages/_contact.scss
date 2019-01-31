@@ -4,6 +4,10 @@
 
 .contact-item {
   margin-bottom: 30px;
+
+  @include for-phone-only {
+    margin-left: 25px;
+  }
   
   > .image {
     height: 55px;

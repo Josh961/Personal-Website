@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
   <title>Design - Joshua Zinkovsky</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.min.css">
 </head>
 <body>
   <nav class="main-nav">
@@ -22,11 +31,37 @@
       <a class="nav-link selected" href="design.html">Design</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
-      <a class="mobile-menu" href="javascript:void(0);">
-        <i class="fa fa-bars"></i>
-      </a>
+      <img id="menu-btn" class="menu-btn" src="images/menu.svg" alt="Menu">
     </div>
   </nav>
+  <div id="mobile-menu" class="mobile-menu">
+    <span class="close">&times;</span>
+    <div class="nav-list">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="projects.html">Projects</a>
+      <a class="link -selected" href="design.html">Design</a>
+      <a class="link" href="about.html">About</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <main>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-item">
+      <a class="link" href="https://github.com/Josh961" target="_blank">
+        <img class="image" src="images/github.svg" alt="GitHub">GitHub
+      </a>
+    </div>
+    <div class="footer-item">
+      <a class="link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
+        <img class="image" src="images/linkedin.svg" alt="LinkedIn">LinkedIn
+      </a>
+    </div>
+    <span class="copyright">Copyright © joshz.me 2019</span>
+    <a class="github" href="https://github.com/Josh961/Portfolio" target="_blank">Code on GitHub</a>
+  </footer>
 
   <script src="scripts/main.js"></script>
 </body>

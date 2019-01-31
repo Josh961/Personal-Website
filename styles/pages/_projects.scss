@@ -30,9 +30,13 @@
   }
 
   > .info {
-    width: 70%;
+    width: 85%;
     margin: 40px auto;
     text-align: left;
+
+    @include for-tablet-landscape-up() {
+      width: 70%;
+    }
   }
 
   .link {
@@ -56,7 +60,7 @@
 .separator {
   margin: 200px 0;
   transform: rotate(10deg);
-
+  
   &.-flipped {
     transform: rotate(-10deg);
   }

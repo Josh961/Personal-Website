@@ -357,8 +357,8 @@ body {
 /**
  * If the page is too short to put the footer on the bottom,
  * make the minimum height for 'main' the entire view height - 
- * (navigation height + top margin container height + footer height).
- * In this case: 100vh - (105px + 100px + 150px).
+ * (navigation height + footer height).
+ * In this case: 100vh - (105px + 150px).
  */
 main {
   min-height: calc(100vh - 255px);
@@ -370,7 +370,7 @@ a {
   text-decoration: none;
 }
 
-p {
+p, li {
   color: #666;
   font-size: 18px;
   line-height: 1.6;
@@ -393,21 +393,29 @@ img {
   margin: 100px auto 200px auto;
 }
 
+@media (max-width: 599px) {
+  .container {
+    margin: 100px auto 150px auto;
+  }
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
+  grid-row-gap: 50px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "left left" "right right";
   max-width: 900px;
   padding: 0 10px;
-  margin: 100px auto 200px auto;
+  margin: 100px auto 150px auto;
 }
 
 @media (min-width: 900px) {
   .grid-container {
         grid-template-areas: "left right";
     width: 100%;
+    margin: 100px auto 200px auto;
   }
   .grid-container.-centered {
     position: absolute;
@@ -424,7 +432,6 @@ img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: left;
-  margin-bottom: 20px;
 }
 
 .grid-item-right {
@@ -501,6 +508,12 @@ img {
   margin: 0 auto;
   padding-top: 45px;
   background: #fff;
+}
+
+@media (max-width: 599px) {
+  .main-nav {
+    max-width: 95%;
+  }
 }
 
 /* Header Section
@@ -583,7 +596,7 @@ img {
 }
 
 @media (min-width: 900px) {
-  .nav-section .mobile-menu {
+  .nav-section .menu-btn {
     display: none;
   }
 }
@@ -676,6 +689,18 @@ img {
           transform: translateX(0);
 }
 
+/**
+ * Mobile navigation menu button.
+ */
+.menu-btn {
+  height: 35px;
+  padding: 10px;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
 /** 
  * Current selected page.
  */
@@ -685,20 +710,88 @@ img {
 }
 
 /* ========================================================
+   Mobile Navigation
+   ======================================================== */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  overflow: hidden;
+}
+
+.mobile-menu > .close {
+  padding: 10px;
+  float: right;
+  color: #666;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.mobile-menu > .close:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav-list > .link {
+  padding: 0 5px;
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.nav-list > .link:hover {
+  background: #f9cdd7;
+}
+
+.nav-list > .link.-selected {
+  background: #f9cdd7;
+}
+
+/* ========================================================
    Site Footer
    ======================================================== */
 .site-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 150px;
-  border-top: 1px solid #999;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  height: 150px;
+  border-top: 1px solid #999;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .site-footer {
+    height: 175px;
+  }
 }
 
 .footer-item {
@@ -722,6 +815,30 @@ img {
 
 .footer-item > .link:hover {
   opacity: .6;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+}
+
+.github {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 14px;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.github:hover {
+  color: #666;
+}
+
+@media (max-width: 599px) {
+  .github {
+    display: none;
+  }
 }
 
 /* ========================================================
@@ -884,9 +1001,15 @@ img {
 }
 
 .project-item > .info {
-  width: 70%;
+  width: 85%;
   margin: 40px auto;
   text-align: left;
+}
+
+@media (min-width: 900px) {
+  .project-item > .info {
+    width: 70%;
+  }
 }
 
 .project-item .link {
@@ -933,10 +1056,54 @@ img {
 }
 
 /* ========================================================
+   About Page Item
+   ======================================================== */
+/**
+ * Header and paragraphs for the 'about' page.
+ *
+ * 1. Handle collapsing margin.
+ */
+.about-item {
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.about-item > .header {
+  font-size: 42px;
+}
+
+.about-item > .info {
+  font-size: 20px;
+}
+
+.about-item > .list {
+  position: relative;
+  list-style: none;
+}
+
+.about-item > .list > li {
+  margin-bottom: 20px;
+  margin-left: 140px;
+}
+
+.about-item > .list > li::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 40px;
+  font-weight: bold;
+}
+
+/* ========================================================
    Contact Information
    ======================================================== */
 .contact-item {
   margin-bottom: 30px;
+}
+
+@media (max-width: 599px) {
+  .contact-item {
+    margin-left: 25px;
+  }
 }
 
 .contact-item > .image {

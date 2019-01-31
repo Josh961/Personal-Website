@@ -12,8 +12,8 @@ body {
 /**
  * If the page is too short to put the footer on the bottom,
  * make the minimum height for 'main' the entire view height - 
- * (navigation height + top margin container height + footer height).
- * In this case: 100vh - (105px + 100px + 150px).
+ * (navigation height + footer height).
+ * In this case: 100vh - (105px + 150px).
  */
 main {
   min-height: calc(100vh - 255px);
@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-p {
+p, li {
   color: #666;
   font-size: 18px;
   line-height: 1.6;
@@ -44,10 +44,15 @@ img {
   max-width: 900px;
   padding: 0 10px;
   margin: 100px auto 200px auto;
+
+  @include for-phone-only {
+    margin: 100px auto 150px auto;
+  }
 }
 
 .grid-container {
   display: grid;
+  grid-row-gap: 50px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "left left"
@@ -55,13 +60,14 @@ img {
 
   max-width: 900px;
   padding: 0 10px;
-  margin: 100px auto 200px auto;
+  margin: 100px auto 150px auto;
 
   @include for-tablet-landscape-up() {
     grid-template-areas:
       "left right";
-    
+
     width: 100%;
+    margin: 100px auto 200px auto;
 
     &.-centered {
       position: absolute;
@@ -75,7 +81,6 @@ img {
 
 .grid-item-left {
   grid-area: left;
-  margin-bottom: 20px;
 }
 
 .grid-item-right {

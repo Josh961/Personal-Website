@@ -32,6 +32,10 @@
   margin: 0 auto;
   padding-top: 45px;
   background: #fff;
+
+  @include for-phone-only() {
+    max-width: 95%;
+  }
 }
 
 /* Header Section
@@ -99,7 +103,7 @@
   display: inline-block;
 
   @include for-tablet-landscape-up() {
-    .mobile-menu {
+    .menu-btn {
       display: none;
     }
   }
@@ -171,9 +175,74 @@
   }
 }
 
+/**
+ * Mobile navigation menu button.
+ */
+.menu-btn {
+  height: 35px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 /** 
  * Current selected page.
  */
 .selected {
   background: linear-gradient(180deg, #fff 55%, $pink 55%, $pink 71%, #fff 71%);
+}
+
+/* ========================================================
+   Mobile Navigation
+   ======================================================== */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  overflow: hidden;
+
+  > .close {
+    padding: 10px;
+    float: right;
+    color: #666;
+    font-size: 32px;
+    font-weight: bold;
+
+    &:hover {
+      color: #333;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  > .link {
+    padding: 0 5px;
+    margin: 10px 0;
+    font-size: 24px;
+
+    &:hover {
+      background: $pink;
+    }
+
+    &.-selected {
+      background: $pink;
+    }
+  }
 }

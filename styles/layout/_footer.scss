@@ -4,10 +4,16 @@
 
 .site-footer {
   display: flex;
-  height: 150px;
-  border-top: 1px solid #999;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 150px;
+  border-top: 1px solid #999;
+  text-align: center;
+
+  @include for-phone-only() {
+    height: 175px;
+  }
 }
 
 .footer-item {
@@ -28,5 +34,26 @@
     &:hover {
       opacity: .6;
     }
+  }
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5px;
+}
+
+.github {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 14px;
+  transition: color 300ms ease;
+  
+  &:hover {
+    color: #666;
+  }
+
+  @include for-phone-only() {
+    display: none;
   }
 }
