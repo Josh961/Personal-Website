@@ -14,9 +14,16 @@ body {
  * make the minimum height for 'main' the entire view height - 
  * (navigation height + footer height).
  * In this case: 100vh - (105px + 150px).
+ *
+ * 1. Grid contianer adds an extra 200px.
  */
 main {
   min-height: calc(100vh - 255px);
+
+  // 1
+  &.-grid-margin {
+    min-height: calc(100vh - 455px);
+  }
 }
 
 a {
@@ -67,15 +74,7 @@ img {
       "left right";
 
     width: 100%;
-    margin: 100px auto 200px auto;
-
-    &.-centered {
-      position: absolute;
-      margin: 0;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    margin: 200px auto 200px auto;
   }
 }
 

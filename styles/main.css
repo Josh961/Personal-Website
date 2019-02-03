@@ -359,9 +359,15 @@ body {
  * make the minimum height for 'main' the entire view height - 
  * (navigation height + footer height).
  * In this case: 100vh - (105px + 150px).
+ *
+ * 1. Grid contianer adds an extra 200px.
  */
 main {
   min-height: calc(100vh - 255px);
+}
+
+main.-grid-margin {
+  min-height: calc(100vh - 455px);
 }
 
 a {
@@ -415,15 +421,7 @@ img {
   .grid-container {
         grid-template-areas: "left right";
     width: 100%;
-    margin: 100px auto 200px auto;
-  }
-  .grid-container.-centered {
-    position: absolute;
-    margin: 0;
-    top: 45%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    margin: 200px auto 200px auto;
   }
 }
 
@@ -616,6 +614,7 @@ img {
  * the minimum breakpoint is hit, they will be displayed inline.
  *
  * 1. Gradient background to be faded in on hover.
+ * 2. Bug, needs some type of animation to run.
  */
 .nav-link {
   display: none;
@@ -626,8 +625,8 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-animation: fade-in-bottom 2s;
-          animation: fade-in-bottom 2s;
+  -webkit-animation: fade-in-left 2s;
+          animation: fade-in-left 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -683,10 +682,12 @@ img {
   pointer-events: none;
 }
 
-.nav-link:hover::before {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+@media (min-width: 900px) {
+  .nav-link:hover::before {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 /**
@@ -759,10 +760,6 @@ img {
   padding: 0 5px;
   margin: 10px 0;
   font-size: 24px;
-}
-
-.nav-list > .link:hover {
-  background: #f9cdd7;
 }
 
 .nav-list > .link.-selected {
@@ -937,7 +934,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 47%;
+    top: 57%;
     left: 49%;
   }
 }
@@ -1074,6 +1071,12 @@ img {
 
 .about-item > .info {
   font-size: 20px;
+}
+
+@media (max-width: 599px) {
+  .about-item > .info {
+    padding: 10px;
+  }
 }
 
 .about-item > .list {

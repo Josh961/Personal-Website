@@ -121,6 +121,7 @@
  * the minimum breakpoint is hit, they will be displayed inline.
  *
  * 1. Gradient background to be faded in on hover.
+ * 2. Bug, needs some type of animation to run.
  */
 .nav-link {
   display: none;
@@ -128,7 +129,7 @@
   padding: 0 10px;
   font-family: $font-stack;
   user-select: none;
-  animation: fade-in-bottom 2s;
+  animation: fade-in-left 2s; // 2
   animation-fill-mode: forwards;
 
   @include for-tablet-landscape-up() {
@@ -169,9 +170,11 @@
     pointer-events: none;
   }
 
-  &:hover::before {
-    opacity: 1;
-    transform: translateX(0);
+  @include for-tablet-landscape-up() {
+    &:hover::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 
@@ -236,10 +239,6 @@
     padding: 0 5px;
     margin: 10px 0;
     font-size: 24px;
-
-    &:hover {
-      background: $pink;
-    }
 
     &.-selected {
       background: $pink;

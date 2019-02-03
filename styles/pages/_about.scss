@@ -17,6 +17,10 @@
 
   > .info {
     font-size: 20px;
+
+    @include for-phone-only() {
+      padding: 10px;
+    }
   }
 
   > .list {
