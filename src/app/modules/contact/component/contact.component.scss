@@ -1,0 +1,75 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+/* ========================================================
+   Contact Information
+   ======================================================== */
+
+   .contact-item {
+    margin-bottom: 30px;
+
+    @include for-phone-only {
+      margin-left: 25px;
+    }
+
+    > .image {
+      height: 55px;
+    }
+
+    > .info {
+      display: inline-block;
+      margin-left: 25px;
+      transform: translateY(20%);
+    }
+  }
+
+  /* ========================================================
+     Contact Form
+     ======================================================== */
+
+  .contact-form {
+
+    > .field {
+      display: block;
+      width: 70%;
+      padding: 14px 24px;
+      margin: 20px auto;
+      border: 2px solid $pink;
+      border-radius: 24px;
+      transition: box-shadow 300ms ease-out;
+      outline: none;
+      resize: none;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:focus {
+        box-shadow: 0 0 6px $dark-pink;
+      }
+    }
+
+    > .text {
+      height: 125px;
+    }
+
+    > .submit {
+      display: block;
+      padding: 10px 80px;
+      margin: 0 auto;
+      color: #fff;
+      background: $pink;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid $pink;
+      border-radius: 20px;
+      transition: 300ms ease;
+      transition-property: background, border;
+
+      &:hover {
+        background: $dark-pink;
+        border: 1px solid $dark-pink;
+        cursor: pointer;
+      }
+    }
+  }

@@ -1,0 +1,71 @@
+<nav class="main-nav">
+  <div class="nav-header">
+    <h1>
+      <a href="index.html"><span>Joshua </span>Zinkovsky</a>
+    </h1>
+  </div>
+  <div class="nav-section">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="projects.html">Projects</a>
+    <a class="nav-link" href="design.html">Design</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link selected" href="contact.html">Contact</a>
+    <img id="menu-btn" class="menu-btn" src="assets/images/menu.svg" alt="Menu">
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <span class="close">&times;</span>
+  <div class="nav-list">
+    <a class="link" href="index.html">Home</a>
+    <a class="link" href="projects.html">Projects</a>
+    <a class="link" href="design.html">Design</a>
+    <a class="link" href="about.html">About</a>
+    <a class="link -selected" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<main class="-grid-margin">
+  <div class="grid-container">
+    <div class="grid-item-left">
+      <div class="contact-item">
+        <img class="image" src="assets/images/pin.svg" alt="Location Pin">
+        <div class="info">
+          <h3 class="header">Address</h3>
+          <span>Pittsburgh, PA</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <img class="image" src="assets/images/mail.svg" alt="Email">
+        <div class="info">
+          <h3 class="header">Email</h3>
+          <span>joshua.zky@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item-right">
+      <form class="contact-form" action="https://formspree.io/joshua.zky@gmail.com" method="POST">
+        <input class="field" type="text" name="name" placeholder="Name" required>
+        <input class="field" type="email" name="_replyto" placeholder="Email" required>
+        <textarea class="field text" type="textarea" name="message" placeholder="Message..." required></textarea>
+        <input class="submit" type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-item">
+    <a class="link" href="https://github.com/Josh961" target="_blank">
+      <img class="image" src="assets/images/github.svg" alt="GitHub">GitHub
+    </a>
+  </div>
+  <div class="footer-item">
+    <a class="link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
+      <img class="image" src="assets/images/linkedin.svg" alt="LinkedIn">LinkedIn
+    </a>
+  </div>
+  <span class="copyright">Copyright © joshz.me 2019</span>
+  <a class="github" href="https://github.com/Josh961/Portfolio" target="_blank">Code on GitHub</a>
+</footer>
+
+<script src="assets/scripts/main.js"></script>
