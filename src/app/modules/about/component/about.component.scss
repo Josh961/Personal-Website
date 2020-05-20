@@ -1,0 +1,44 @@
+@import 'abstracts/mixins';
+
+/* ========================================================
+   About Page Item
+   ======================================================== */
+
+/**
+ * Header and paragraphs for the 'about' page.
+ *
+ * 1. Handle collapsing margin.
+ */
+ .about-item {
+  margin-bottom: 20px;
+  border: 1px solid transparent; // 1
+
+  > .header {
+    font-size: 42px;
+  }
+
+  > .info {
+    font-size: 20px;
+
+    @include for-phone-only() {
+      padding: 10px;
+    }
+  }
+
+  > .list {
+    position: relative;
+    list-style: none;
+
+    > li {
+      margin-bottom: 20px;
+      margin-left: 140px;
+
+      &::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 40px;
+        font-weight: bold;
+      }
+    }
+  }
+}
