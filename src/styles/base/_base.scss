@@ -1,12 +1,19 @@
-/* ========================================================
-   Sitewide Tag Styling
-   ======================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
   min-height: 100vh;
   margin: 0;
-  color: #333;
-  font-family: $font-stack;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 /**
@@ -24,12 +31,6 @@ main {
   &.-grid-margin {
     min-height: calc(100vh - 455px);
   }
-}
-
-a {
-  color: #333;
-  outline: none;
-  text-decoration: none;
 }
 
 p, li {
