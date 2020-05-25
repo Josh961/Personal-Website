@@ -1,26 +1,26 @@
 <div class="home">
   <app-navigation></app-navigation>
-
-  <!-- Home page specific elements and styling -->
-  <div class="home-social-links-wrapper">
-    <div class="home-social-link-item">
-      <a class="link" href="https://github.com/Josh961" target="_blank">
-        <img class="image" src="assets/images/github.svg" alt="GitHub">GitHub
+  <div class="social-wrapper">
+    <div class="social-wrapper__item">
+      <a class="social-wrapper__link" href="https://github.com/Josh961" target="_blank">
+        <img class="social-wrapper__image" src="assets/images/github.svg" alt="GitHub">
+        GitHub
       </a>
     </div>
-    <div class="home-social-link-item">
-      <a class="link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
-        <img class="image" src="assets/images/linkedin.svg" alt="LinkedIn">LinkedIn
+    <div class="social-wrapper__item">
+      <a class="social-wrapper__link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
+        <img class="social-wrapper__image" src="assets/images/linkedin.svg" alt="LinkedIn">
+        LinkedIn
       </a>
     </div>
   </div>
-  <div class="home-container">
-    <div class="home-mobile-navigation nav-section -fade">
-      <a class="nav-link selected" href="index.html">Home</a>
-      <a class="nav-link" href="projects.html">Projects</a>
-      <a class="nav-link" href="design.html">Design</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="contact.html">Contact</a>
+  <div class="mobile-navigation">
+    <div class="mobile-navigation__list">
+      <a class="mobile-navigation__link" [routerLink]="['/home']">Home</a>
+      <a class="mobile-navigation__link" [routerLink]="['/projects']">Projects</a>
+      <a class="mobile-navigation__link" [routerLink]="['/design']">Design</a>
+      <a class="mobile-navigation__link" [routerLink]="['/about']">About</a>
+      <a class="mobile-navigation__link" [routerLink]="['/contact']">Contact</a>
     </div>
   </div>
 </div>
