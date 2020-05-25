@@ -47,18 +47,22 @@
     }
 
     &--fade {
-      opacity: 0;
-      animation: fade-in-bottom 2s;
-      animation-fill-mode: forwards;
-      animation-delay: 200ms;
+      @include for-tablet-landscape-up() {
+        opacity: 0;
+        animation: fade-in-bottom 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 200ms;
+      }
     }
   }
 
   &__links--fade {
-    opacity: 0;
-    animation: fade-in-left 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+    @include for-tablet-landscape-up() {
+      opacity: 0;
+      animation: fade-in-left 2s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
   }
 
   &__link {
