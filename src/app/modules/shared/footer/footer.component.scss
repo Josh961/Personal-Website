@@ -1,0 +1,56 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: $lg-2;
+  padding: $sm-1 0;
+
+  &__item {
+    display: inline;
+    margin: 0 $md-1;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    color: $grey-700;
+    font-size: $text-2xl;
+    transition: opacity 400ms ease;
+    transform: translateY(50%);
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    height: $md-3;
+    margin-right: $sm-3;
+  }
+
+  &__copyright {
+    color: $grey-700
+  }
+}
+
+.github {
+  position: absolute;
+  right: $sm-3;
+  bottom: $sm-1;
+  color: $grey-600;
+  font-size: $text-xs;
+  transition: color 300ms ease;
+
+  @include for-phone-only() {
+    display: none;
+  }
+
+  &:hover {
+    color: $grey-500;
+  }
+}
