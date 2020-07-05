@@ -1,13 +1,13 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-@keyframes fade-in-bottom { 
-  from { 
+@keyframes fade-in-bottom {
+  from {
     transform: translateY(50px);
   } to {
     opacity: 1;
     transform: translateY(0);
-  } 
+  }
 }
 
 @keyframes fade-in-left {
@@ -18,21 +18,19 @@
     transform: translateX(0);
   }
 }
-  
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $sm-4 $md-2;
+  height: $md-4;
+  padding: 0 $md-2;
   background: white;
   font-family: 'Quicksand';
+  font-size: $text-2xl;
 
   &__header {
     color: $grey-800;
-
-    @include for-phone-only() {
-      font-size: $text-2xl;
-    }
 
     @include for-tablet-portrait-up() {
       font-size: $text-5xl;
@@ -70,23 +68,23 @@
     position: relative;
     padding: 0 $sm-2;
     color: $grey-800;
-  
+
     @include for-tablet-landscape-up() {
       display: inline;
       margin-left: $sm-4;
       font-size: $text-xl;
     }
-  
+
     @include for-small-desktop-up() {
       margin-left: $md-1;
       font-size: $text-2xl;
     }
-  
+
     @include for-medium-desktop-up() {
       margin-left: $md-2;
       font-size: $text-3xl;
     }
-    
+
     &:not(.navigation__link--selected)::before {
       content: "";
       position: absolute;
@@ -101,7 +99,7 @@
       transition-property: opacity, transform;
       pointer-events: none;
     }
-  
+
     &:hover::before {
       opacity: 1;
       transform: translateX(0);
@@ -115,7 +113,7 @@
   &__menu-button {
     height: $md-4;
     padding: $sm-3;
-  
+
     @include for-tablet-landscape-up() {
       display: none;
     }
