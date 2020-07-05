@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavigationComponent } from './navigation/navigation.component';
+import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   imports: [
@@ -10,10 +11,12 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule
   ],
   exports: [
+    CardComponent,
     FooterComponent,
     NavigationComponent
   ],
   declarations: [
+    CardComponent,
     FooterComponent,
     NavigationComponent
   ],

@@ -1,0 +1,9 @@
+<div class="card">
+  <div *ngIf="header">
+    <span class="card__header">{{header}}</span>
+    <div class="card__separator"></div>
+  </div>
+  <div class="card__body">
+    <ng-content></ng-content>
+  </div>
+</div>
