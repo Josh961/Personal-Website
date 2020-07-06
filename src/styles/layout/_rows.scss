@@ -1,0 +1,54 @@
+.controls-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  &--start {
+    justify-content: flex-start;
+
+    > .btn {
+      margin-right: $sm-3;
+    }
+
+    > .input-container {
+      margin-right: $sm-3;
+    }
+  }
+
+  &--end {
+    justify-content: flex-end;
+
+    > .btn {
+      margin-left: $sm-3;
+    }
+
+    > .input-container {
+      margin-left: $sm-3;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--lg {
+    margin-top: $md-3;
+  }
+
+  &--sm {
+    margin-top: $md-1;
+  }
+
+  &--xs {
+    margin-top: $sm-3;
+  }
+
+  &--zero {
+    margin-top: 0;
+  }
+
+  > .btn--tertiary {
+    margin-right: $sm-2;
+  }
+}

@@ -1,0 +1,115 @@
+.two-column-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($lg-4, 1fr));
+  column-gap: $md-4;
+  row-gap: $md-3;
+
+  &__left {
+    grid-column: span 1;
+  }
+
+  &__right {
+    grid-column: span 2;
+  }
+
+  &__header {
+    display: block;
+    font-size: $text-3xl;
+    color: $blue-900;
+  }
+
+  &__sub-header {
+    width: 70%;
+    margin-top: $sm-3;
+    color: $grey-500;
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--center {
+      align-items: center;
+    }
+
+    &--baseline {
+      align-items: baseline;
+    }
+
+    &--margin {
+      margin: $md-1 0;
+    }
+  }
+
+  &__input {
+    position: relative;
+    margin-bottom: $md-2;
+    margin-right: $sm-3;
+
+    &--flex-one {
+      flex: 1 1 $md-4;
+    }
+
+    &--flex-two {
+      flex: 2 1 $lg-2;
+    }
+
+    &--flex-three {
+      flex: 3 1 $lg-4;
+    }
+
+    &--basis-sm {
+      flex-basis: $lg-2;
+    }
+
+    &--basis-md {
+      flex-basis: $lg-4;
+    }
+
+    &--basis-lg {
+      flex-basis: $xl-2;
+    }
+  }
+
+  &__label {
+    @include inputLabel();
+  }
+
+  &__field {
+    @include inputField();
+  }
+
+  &__error {
+    @include inputError();
+  }
+}
+
+.form-separator {
+  border-bottom: 1px solid $grey-300;
+  margin-top: $sm-4;
+  margin-bottom: $md-1;
+}
+
+.form-success {
+  padding: $sm-4;
+  margin-bottom: $sm-3;
+  color: $green-800;
+  background: $green-200;
+  border-radius: 8px;
+}
+
+.form-error {
+  display: flex;
+  flex-direction: column;
+  padding: $sm-4;
+  margin-bottom: $sm-3;
+  color: $red-800;
+  background: $red-200;
+  border-radius: 8px;
+
+  &__msg:not(:last-child) {
+    margin-bottom: $sm-2;
+  }
+}
