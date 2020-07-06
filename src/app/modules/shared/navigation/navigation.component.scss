@@ -33,10 +33,6 @@
     color: $grey-800;
 
     @include for-tablet-portrait-up() {
-      font-size: $text-5xl;
-    }
-
-    @include for-tablet-landscape-up() {
       font-size: $text-4xl;
     }
 
