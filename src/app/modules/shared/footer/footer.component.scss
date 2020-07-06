@@ -19,9 +19,14 @@
     display: inline-flex;
     align-items: center;
     color: $grey-700;
-    font-size: $text-2xl;
+    font-size: $text-xl;
     transition: opacity 400ms ease;
     transform: translateY(50%);
+
+    @include for-tablet-portrait-up() {
+      font-size: $text-2xl;
+    }
+
 
     &:hover {
       opacity: 0.6;
