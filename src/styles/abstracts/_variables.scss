@@ -27,6 +27,7 @@ $xl-1: 24rem;
 $xl-2: 32rem;
 $xl-3: 40rem;
 $xl-4: 48rem;
+$xl-5: 60rem;
 
 // Color
 $grey-100: hsl(204, 45%, 98%);
@@ -48,6 +49,16 @@ $red-600: hsl(0, 76%, 57%);
 $red-700: hsl(0, 61%, 48%);
 $red-800: hsl(0, 56%, 39%);
 $red-900: hsl(0, 47%, 31%);
+
+$pink-100: hsl(348, 100%, 98%);
+$pink-200: hsl(346, 79%, 89%);
+$pink-300: hsl(348, 78%, 82%);
+$pink-400: hsl(336, 86%, 75%);
+$pink-500: hsl(331, 79%, 66%);
+$pink-600: hsl(329, 64%, 54%);
+$pink-700: hsl(325, 57%, 46%);
+$pink-800: hsl(322, 60%, 37%);
+$pink-900: hsl(318, 51%, 29%);
 
 $orange-100: hsl(40, 100%, 97%);
 $orange-200: hsl(39, 96%, 89%);
@@ -99,9 +110,7 @@ $blue-700: hsl(211, 61%, 43%);
 $blue-800: hsl(213, 49%, 34%);
 $blue-900: hsl(215, 41%, 28%);
 
-$font-stack: Segoe UI, Arial, Helvetica, sans-serif;
-$font-stack-bold: Arial Rounded MT Bold, Arial, Helvetica, sans-serif;
-$pink: #f9cdd7;
-$dark-pink: #f5afbd;
+$pink: hsl(346, 79%, 89%);
+$dark-pink: hsl(348, 78%, 82%);
 $green: #d7ebcf;
 $blue: #c7e9f3;
