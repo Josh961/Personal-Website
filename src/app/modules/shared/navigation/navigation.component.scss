@@ -24,10 +24,14 @@
   justify-content: space-between;
   align-items: center;
   height: $md-4;
-  padding: 0 $md-2;
+  padding: 0 $sm-2;
   background: white;
   font-family: 'Quicksand';
   font-size: $text-2xl;
+
+  @include for-tablet-portrait-up() {
+    padding: 0 $md-2;
+  }
 
   &__header {
     color: $grey-800;
