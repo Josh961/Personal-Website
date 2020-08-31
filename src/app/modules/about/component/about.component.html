@@ -1,42 +1,37 @@
 <app-navigation></app-navigation>
-
 <main>
   <div class="container">
     <div class="about-item">
-      <h2 class="header">About Me</h2>
-      <p class="info">
-        Hi, my name is Josh and I'm currently in my last semester at The University of Pittsburgh.
-        I'm pursuing a degree in Computer Science with a certificate in Russian and East European Studies.
-        I have a passion for all aspects of programming and CS in general. I'm currently doing full stack
-        web development and learning more each and every day. I enjoy both the front and back end of
-        web development, but also really enjoy coding a hashing algorithm, writing testable / well written
-        code, and employing the best practices of object oriented design. On the side, I like to work on UI
-        and graphic design. I feel like it's important to at least familiarize myself with all aspects of software
-        development to gain a well rounded understanding of what goes into it.
+      <h2 class="about-item__header">About Me</h2>
+      <p class="about-item__info">
+        Hi, my name is Josh and I'm currently working as a software engineer building APIs and web applications
+        within the healthcare space. I graduated from The University of Pittsburgh with a bachelor's in Computer
+        Science and a certificate in Russian and East European Studies.
+      </p>
+      <p class="about-item__info">
+        I love working as a full stack developer and spend the majority of my time coding in Angular for our frontend
+        and C# for our backend (along with SQL). I'm a stickler for well written code. Constant refactoring. No trailing
+        whitespace. Rebasing instead of merging to resolve conflicts. And all the other nitpicky details that unfortunately
+        get overlooked. Writing software is a craft. One which requires consistent improvement and making plenty of mistakes!
       </p>
     </div>
     <div class="about-item">
-      <h2 class="header -right">Skills</h2>
-      <ul class="list">
-        <li data-label="Languages:">Java, C#, C, Ruby, Assembly</li>
-        <li data-label="Frontend:">HTML, CSS, Sass, JavaScript, jQuery</li>
-        <li data-label="Backend:">.NET and Ruby on Rails</li>
-        <li data-label="Misc:">Git, JUnit, Linux</li>
-        <li data-label="Design:">Affinity Photo and Affinity Designer</li>
+      <h2 class="about-item__header">Skills</h2>
+      <ul class="label-list">
+        <li class="label-list__item" data-label="Frontend:">Angular, TypeScript, RxJS, HTML, CSS, JavaScript</li>
+        <li class="label-list__item" data-label="Backend:">.NET, NUnit, C#, SQL</li>
+        <li class="label-list__item" data-label="Misc:">Git, npm, Linux, C, Java, Assembly</li>
+        <li class="label-list__item" data-label="Design:">Affinity Photo and Affinity Designer</li>
       </ul>
     </div>
     <div class="about-item">
-      <h2 class="header">Personal</h2>
-      <p class="info">
+      <h2 class="about-item__header">Personal</h2>
+      <p class="about-item__info">
         I was born and raised in Pittsburgh to Ukrainian parents. We speak Russian at home and eat borscht.
         I'm really into wrestling 🤼, Brazilian jiu-jitsu 🥋, motorcycles 🏍️, and foreign languages 🗺️. If I'm not
-        busy
-        coding, you can usually find me training on the mats, riding around town, or studying Russian.
+        busy coding, you can usually find me training on the mats, riding around town, or studying Russian.
       </p>
     </div>
   </div>
 </main>
-
 <app-footer></app-footer>
-
-<script src="assets/scripts/main.js"></script>
