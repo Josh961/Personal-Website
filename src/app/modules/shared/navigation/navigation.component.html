@@ -1,0 +1,26 @@
+<nav class="navigation">
+  <a
+    class="navigation__header"
+    [ngClass]="{'navigation__header--fade': onHomePage}"
+    [routerLink]="['/home']">
+    Joshua <span class="bold">Zinkovsky</span>
+  </a>
+  <div class="navigation__links" [ngClass]="{'navigation__links--fade': onHomePage}">
+    <a class="navigation__link" [routerLink]="['/home']" routerLinkActive="navigation__link--selected">Home</a>
+    <a class="navigation__link" [routerLink]="['/projects']" routerLinkActive="navigation__link--selected">Projects</a>
+    <a class="navigation__link" [routerLink]="['/design']" routerLinkActive="navigation__link--selected">Design</a>
+    <a class="navigation__link" [routerLink]="['/about']" routerLinkActive="navigation__link--selected">About</a>
+    <a class="navigation__link" [routerLink]="['/contact']" routerLinkActive="navigation__link--selected">Contact</a>
+    <img class="navigation__menu-button" src="assets/images/menu.svg" alt="Menu" (click)="displayMobileNavigation=true">
+  </div>
+</nav>
+<div class="mobile-navigation" *ngIf="displayMobileNavigation">
+  <span class="mobile-navigation__close" (click)="displayMobileNavigation=false">&times;</span>
+  <div class="mobile-navigation__list">
+    <a class="mobile-navigation__link" [routerLink]="['/home']" routerLinkActive="mobile-navigation__link--selected">Home</a>
+    <a class="mobile-navigation__link" [routerLink]="['/projects']" routerLinkActive="mobile-navigation__link--selected">Projects</a>
+    <a class="mobile-navigation__link" [routerLink]="['/design']" routerLinkActive="mobile-navigation__link--selected">Design</a>
+    <a class="mobile-navigation__link" [routerLink]="['/about']" routerLinkActive="mobile-navigation__link--selected">About</a>
+    <a class="mobile-navigation__link" [routerLink]="['/contact']" routerLinkActive="mobile-navigation__link--selected">Contact</a>
+  </div>
+</div>

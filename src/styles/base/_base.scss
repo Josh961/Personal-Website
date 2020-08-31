@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**
+ * If the page is too short to put the footer on the bottom,
+ * make the minimum height for 'main' the entire view height -
+ * (navigation height + footer height).
+ * In this case: 100vh - (4rem + 8rem).
+ */
+main {
+  min-height: calc(100vh - (4rem + 8rem));
+
+  &.--center {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,59 @@
+<app-navigation></app-navigation>
+<main class=--center>
+  <div class="container">
+    <app-card header="Contact Me">
+      <div class="two-column-form">
+        <div>
+          <div class="contact-item">
+            <img class="contact-item__image" src="assets/images/pin.svg" alt="Location Pin">
+            <div class="contact-item__info">
+              <h3 class="contact-item__header">Address</h3>
+              <span class="contact-item__detail">Pittsburgh, PA</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img class="contact-item__image" src="assets/images/mail.svg" alt="Email">
+            <div class="contact-item__info">
+              <h3 class="contact-item__header">Email</h3>
+              <span class="contact-item__detail">joshua.zky@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="contact-form" action="https://formspree.io/joshua.zky@gmail.com" method="POST">
+            <div class="input-container">
+              <label class="input-container__label">
+                Name
+                <input
+                  type="text"
+                  class="input-container__field"
+                  name="name"
+                  required>
+              </label>
+            </div>
+            <div class="input-container">
+              <label class="input-container__label">
+                Email
+                <input
+                  type="email"
+                  class="input-container__field"
+                  name="_replyto"
+                  required>
+              </label>
+            </div>
+            <div class="input-container input-container--less-bottom">
+              <label class="input-container__label">
+                Message
+                <textarea class="input-container__text-area" name="message" required></textarea>
+              </label>
+            </div>
+            <div class="controls-row controls-row--end controls-row--sm">
+              <button type="submit" class="btn btn--primary" value="Send">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</main>
+<app-footer></app-footer>

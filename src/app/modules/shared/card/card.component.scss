@@ -1,0 +1,30 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.card {
+  position: relative;
+  min-height: $lg-1;
+  background: $grey-100;
+  border: 2px solid $grey-200;
+  border-radius: 12px;
+
+  &__header {
+    display: block;
+    padding: $md-1 $md-2;
+    color: $blue-900;
+    font-size: $text-2xl;
+  }
+
+  &__separator {
+    width: 100%;
+    border-bottom: 2px solid $grey-200;
+  }
+
+  &__body {
+    padding: $md-1;
+
+    @include for-tablet-portrait-up() {
+      padding: $md-4;
+    }
+  }
+}

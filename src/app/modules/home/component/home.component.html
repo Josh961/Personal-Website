@@ -1,0 +1,26 @@
+<div class="home">
+  <app-navigation></app-navigation>
+  <div class="social-wrapper">
+    <div class="social-wrapper__item">
+      <a class="social-wrapper__link" href="https://github.com/Josh961" target="_blank">
+        <img class="social-wrapper__image" src="assets/images/github.svg" alt="GitHub">
+        GitHub
+      </a>
+    </div>
+    <div class="social-wrapper__item">
+      <a class="social-wrapper__link" href="https://linkedin.com/in/joshua-zinkovsky" target="_blank">
+        <img class="social-wrapper__image" src="assets/images/linkedin.svg" alt="LinkedIn">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="mobile-navigation">
+    <div class="mobile-navigation__list">
+      <a class="mobile-navigation__link" [routerLink]="['/home']">Home</a>
+      <a class="mobile-navigation__link" [routerLink]="['/projects']">Projects</a>
+      <a class="mobile-navigation__link" [routerLink]="['/design']">Design</a>
+      <a class="mobile-navigation__link" [routerLink]="['/about']">About</a>
+      <a class="mobile-navigation__link" [routerLink]="['/contact']">Contact</a>
+    </div>
+  </div>
+</div>

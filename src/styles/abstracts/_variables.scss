@@ -1,0 +1,111 @@
+// Font Size
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 4rem;
+
+// Spacing and Sizing
+$sm-1: 0.25rem;
+$sm-2: 0.5rem;
+$sm-3: 0.75rem;
+$sm-4: 1rem;
+$md-1: 1.5rem;
+$md-2: 2rem;
+$md-3: 3rem;
+$md-4: 4rem;
+$lg-1: 6rem;
+$lg-2: 8rem;
+$lg-3: 12rem;
+$lg-4: 16rem;
+$xl-1: 24rem;
+$xl-2: 32rem;
+$xl-3: 40rem;
+$xl-4: 48rem;
+$xl-5: 60rem;
+
+// Color
+$grey-100: hsl(204, 45%, 98%);
+$grey-200: hsl(210, 38%, 95%);
+$grey-300: hsl(214, 32%, 91%);
+$grey-400: hsl(211, 25%, 84%);
+$grey-500: hsl(214, 20%, 69%);
+$grey-600: hsl(216, 15%, 52%);
+$grey-700: hsl(218, 17%, 35%);
+$grey-800: hsl(218, 23%, 23%);
+$grey-900: hsl(220, 26%, 14%);
+
+$red-100: hsl(0, 100%, 98%);
+$red-200: hsl(0, 95%, 92%);
+$red-300: hsl(0, 97%, 85%);
+$red-400: hsl(0, 95%, 75%);
+$red-500: hsl(0, 88%, 68%);
+$red-600: hsl(0, 76%, 57%);
+$red-700: hsl(0, 61%, 48%);
+$red-800: hsl(0, 56%, 39%);
+$red-900: hsl(0, 47%, 31%);
+
+$pink-100: hsl(348, 100%, 98%);
+$pink-200: hsl(346, 79%, 89%);
+$pink-300: hsl(348, 78%, 82%);
+$pink-400: hsl(336, 86%, 75%);
+$pink-500: hsl(331, 79%, 66%);
+$pink-600: hsl(329, 64%, 54%);
+$pink-700: hsl(325, 57%, 46%);
+$pink-800: hsl(322, 60%, 37%);
+$pink-900: hsl(318, 51%, 29%);
+
+$orange-100: hsl(40, 100%, 97%);
+$orange-200: hsl(39, 96%, 89%);
+$orange-300: hsl(38, 93%, 77%);
+$orange-400: hsl(33, 90%, 65%);
+$orange-500: hsl(27, 84%, 57%);
+$orange-600: hsl(24, 75%, 50%);
+$orange-700: hsl(20, 71%, 44%);
+$orange-800: hsl(16, 65%, 37%);
+$orange-900: hsl(14, 61%, 30%);
+
+$yellow-100: hsl(60, 100%, 97%);
+$yellow-200: hsl(58, 97%, 87%);
+$yellow-300: hsl(55, 92%, 76%);
+$yellow-400: hsl(51, 89%, 67%);
+$yellow-500: hsl(47, 81%, 61%);
+$yellow-600: hsl(40, 67%, 51%);
+$yellow-700: hsl(36, 71%, 42%);
+$yellow-800: hsl(32, 75%, 34%);
+$yellow-900: hsl(30, 76%, 26%);
+
+$green-100: hsl(136, 100%, 97%);
+$green-200: hsl(103, 41%, 87%);
+$green-300: hsl(141, 60%, 75%);
+$green-400: hsl(143, 55%, 62%);
+$green-500: hsl(145, 46%, 51%);
+$green-600: hsl(148, 48%, 43%);
+$green-700: hsl(150, 48%, 35%);
+$green-800: hsl(152, 45%, 28%);
+$green-900: hsl(152, 42%, 23%);
+
+$teal-100: hsl(168, 100%, 95%);
+$teal-200: hsl(170, 77%, 83%);
+$teal-300: hsl(172, 67%, 70%);
+$teal-400: hsl(174, 59%, 56%);
+$teal-500: hsl(177, 52%, 46%);
+$teal-600: hsl(179, 51%, 39%);
+$teal-700: hsl(181, 47%, 33%);
+$teal-800: hsl(183, 42%, 27%);
+$teal-900: hsl(185, 40%, 23%);
+
+$blue-100: hsl(201, 100%, 96%);
+$blue-200: hsl(202, 81%, 86%);
+$blue-300: hsl(203, 82%, 76%);
+$blue-400: hsl(205, 79%, 66%);
+$blue-500: hsl(207, 73%, 57%);
+$blue-600: hsl(209, 62%, 50%);
+$blue-700: hsl(211, 61%, 43%);
+$blue-800: hsl(213, 49%, 34%);
+$blue-900: hsl(215, 41%, 28%);

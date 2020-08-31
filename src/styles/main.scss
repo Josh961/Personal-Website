@@ -1,0 +1,17 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'vendors/normalize';
+
+@import 'base/base';
+@import 'base/typography';
+
+@import 'layout/container';
+@import 'layout/forms';
+@import 'layout/rows';
+
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/lists';
+
+@import '~aos/dist/aos.css';

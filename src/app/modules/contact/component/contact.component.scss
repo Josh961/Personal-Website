@@ -1,0 +1,24 @@
+@import 'abstracts/variables';
+
+.contact-item {
+  margin-bottom: $md-2;
+
+  &__image {
+    height: 40px;
+    vertical-align: top;
+  }
+
+  &__info {
+    display: inline-block;
+    margin-left: $md-1;
+    transform: translateY(-10%);
+  }
+
+  &__header {
+    color: $grey-800;
+  }
+
+  &__detail {
+    color: $grey-900;
+  }
+}

@@ -1,0 +1,73 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.home {
+  height: 100vh;
+  background-image: url("../../../../assets/images/josh.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+
+  @include for-tablet-landscape-up() {
+    background-image: url("../../../../assets/images/background.svg");
+    background-size: cover;
+  }
+}
+
+.social-wrapper {
+  display: none;
+
+  @include for-tablet-landscape-up() {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 57%;
+    left: 46.5%;
+  }
+
+  &__item {
+    margin-bottom: $md-2;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $grey-700;
+    font-size: 1.2vw;
+    transition: opacity 400ms ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    width: 5vh;
+    margin-right: $sm-3;
+  }
+}
+
+.mobile-navigation {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet-landscape-up() {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $grey-800;
+    font-size: 6vw;
+
+    @include for-phone-only() {
+      margin-bottom: $sm-1;
+    }
+  }
+}

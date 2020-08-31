@@ -1,0 +1,17 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.about-item {
+  color: $grey-800;
+  margin-bottom: $md-4;
+
+  &__header {
+    font-size: $text-4xl;
+  }
+
+  &__info {
+    color: $grey-700;
+    font-size: $text-xl;
+    line-height: 1.5;
+  }
+}

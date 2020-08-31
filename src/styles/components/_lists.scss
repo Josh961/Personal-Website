@@ -1,0 +1,27 @@
+.label-list  {
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: $md-1;
+    margin-left: $lg-2;
+    color: $grey-700;
+
+    @include for-tablet-portrait-up() {
+      margin-left: $lg-3;
+    }
+
+    &::before {
+      content: attr(data-label);
+      position: absolute;
+      left: $md-1;
+      color: $grey-800;
+      font-weight: bold;
+
+      @include for-tablet-portrait-up() {
+        left: $md-3;
+      }
+    }
+  }
+}

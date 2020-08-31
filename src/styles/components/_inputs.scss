@@ -1,0 +1,36 @@
+.input-container {
+  position: relative;
+  margin-bottom: $md-1;
+
+  &--less-bottom {
+    margin-bottom: 0;
+  }
+
+  &--flex-one {
+    flex: 1 1 $md-4;
+  }
+
+  &--flex-two {
+    flex: 2 1 $lg-2;
+  }
+
+  &--flex-three {
+    flex: 3 1 $lg-4;
+  }
+
+  &__label {
+    @include inputLabel();
+  }
+
+  &__field {
+    @include inputField();
+  }
+
+  &__text-area {
+    @include inputTextArea();
+  }
+
+  &__error {
+    @include inputError();
+  }
+}
