@@ -1,6 +1,6 @@
 .container {
-  padding: $sm-4;
-  margin: $md-3 auto;
+  padding: $md-3 $sm-4 $md-4 $sm-4;
+  margin: 0 auto;
   width: 100%;
   max-width: $xl-5;
 }
