@@ -5,6 +5,10 @@
   color: $grey-800;
   margin-bottom: $md-4;
 
+  &:last-child {
+    margin-bottom: 0;;
+  }
+
   &__header {
     font-size: $text-4xl;
   }

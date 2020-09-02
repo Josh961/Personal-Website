@@ -9,6 +9,7 @@
   &__image {
     height: auto;
     width: 100%;
+    margin-bottom: $md-1;
     transition: opacity 300ms ease;
     border: 2px solid $grey-200;
     border-radius: 6px;
