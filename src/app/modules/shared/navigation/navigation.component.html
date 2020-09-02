@@ -11,11 +11,11 @@
     <a class="navigation__link" [routerLink]="['/design']" routerLinkActive="navigation__link--selected">Design</a>
     <a class="navigation__link" [routerLink]="['/about']" routerLinkActive="navigation__link--selected">About</a>
     <a class="navigation__link" [routerLink]="['/contact']" routerLinkActive="navigation__link--selected">Contact</a>
-    <img class="navigation__menu-button" src="assets/images/menu.svg" alt="Menu" (click)="displayMobileNavigation=true">
+    <img class="navigation__menu-button" src="assets/images/menu.svg" alt="Menu" (click)="toggleMobileNavigation(true)">
   </div>
 </nav>
 <div class="mobile-navigation" *ngIf="displayMobileNavigation">
-  <span class="mobile-navigation__close" (click)="displayMobileNavigation=false">&times;</span>
+  <span class="mobile-navigation__close" (click)="toggleMobileNavigation(false)">&times;</span>
   <div class="mobile-navigation__list">
     <a class="mobile-navigation__link" [routerLink]="['/home']" routerLinkActive="mobile-navigation__link--selected">Home</a>
     <a class="mobile-navigation__link" [routerLink]="['/projects']" routerLinkActive="mobile-navigation__link--selected">Projects</a>
