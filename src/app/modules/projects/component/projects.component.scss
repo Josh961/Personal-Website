@@ -19,10 +19,13 @@
   }
 
   &__info {
-    width: 90%;
     color: $grey-700;
     font-size: $text-xl;
     line-height: 1.5;
+
+    @include for-tablet-portrait-up() {
+      width: 90%;
+    }
   }
 
   &__link {
