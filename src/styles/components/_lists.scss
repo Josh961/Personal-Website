@@ -7,6 +7,7 @@
     margin-bottom: $md-1;
     margin-left: $lg-2;
     color: $grey-700;
+    font-size: $text-base;
 
     @include for-tablet-portrait-up() {
       margin-left: $lg-3;
