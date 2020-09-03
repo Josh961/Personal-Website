@@ -2,8 +2,9 @@ name: Build Angular app with production configuration
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - '*'
+      - '!master'
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Build Angular app
+      - name: Build angular app
         run: |
           npm install
           npm run ng build --prod
