@@ -1,11 +1,9 @@
-name: Deploy to GitHub Pages via angular-cli-ghpages
+name: Deploy to github pages via angular-cli-ghpages
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
@@ -25,4 +23,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm install
-        npm run ng -- deploy --base-href=https://github.com/Josh961/Portfolio --name=Josh961 --email=joshua.zky@gmail.com --cname=joshz.me --no-silent
+        npm run ng -- deploy --cname=joshz.me --no-silent
