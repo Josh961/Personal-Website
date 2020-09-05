@@ -5,3 +5,15 @@
 .no-btm-margin {
   margin-bottom: 0;
 }
+
+.no-header-styling {
+  display: inherit;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.responsive-img {
+  height: auto;
+  width: 100%;
+}

@@ -7,13 +7,12 @@
   align-items: center;
 
   &__image {
-    height: auto;
-    width: 100%;
     transition: opacity 300ms ease;
     border: 2px solid $grey-200;
     border-radius: 6px;
+    outline: none;
 
-    &:hover {
+    &:hover, &:focus {
       opacity: 0.7;
     }
   }
@@ -34,17 +33,20 @@
     color: $grey-800;
     font-size: $text-lg;
     border-bottom: 3px solid $blue-200;
+    outline: none;
 
     @include for-tablet-portrait-up() {
       font-size: $text-2xl;
     }
 
-    &:hover {
+    &:hover, &:focus {
       background: $blue-200;
     }
 
     &--large {
+      margin-bottom: $md-1;
       font-size: $text-3xl;
+      font-weight: bold;
 
       @include for-tablet-portrait-up() {
         font-size: $text-4xl;

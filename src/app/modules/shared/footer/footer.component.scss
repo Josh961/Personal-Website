@@ -28,7 +28,7 @@
     }
 
 
-    &:hover {
+    &:hover, &:focus {
       opacity: 0.6;
     }
   }
@@ -55,7 +55,7 @@
     display: none;
   }
 
-  &:hover {
+  &:hover, &:focus {
     color: $grey-500;
   }
 }

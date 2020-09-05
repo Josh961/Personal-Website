@@ -79,7 +79,7 @@
       font-size: $text-2xl;
     }
 
-    &:hover {
+    &:hover, &:focus {
       color: $grey-900;
     }
 
