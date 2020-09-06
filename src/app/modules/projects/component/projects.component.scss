@@ -29,14 +29,25 @@
   }
 
   &__link {
+    position: relative;
     padding: 0 $sm-1;
     color: $grey-800;
     font-size: $text-lg;
-    border-bottom: 3px solid $blue-200;
     outline: none;
 
     @include for-tablet-portrait-up() {
       font-size: $text-2xl;
+    }
+
+    &::after {
+      content: ('');
+      position: absolute;
+      height: 25%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background: $blue-200;
     }
 
     &:hover, &:focus {
