@@ -15,10 +15,10 @@
   }
 
   &__header {
-    color: $grey-800;
+    color: var(--header);
   }
 
   &__detail {
-    color: $grey-900;
+    color: var(--accent);
   }
 }

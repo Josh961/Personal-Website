@@ -12,6 +12,22 @@
     background-image: url("../../../../assets/images/background.svg");
     background-size: cover;
   }
+
+  &--dark {
+    background-image: url("../../../../assets/images/josh-dark.svg");
+
+    @include for-tablet-landscape-up() {
+      background-image: url("../../../../assets/images/background-dark.svg");
+    }
+  }
+
+  &--solarized {
+    background-image: url("../../../../assets/images/josh-solarized.svg");
+
+    @include for-tablet-landscape-up() {
+      background-image: url("../../../../assets/images/background-solarized.svg");
+    }
+  }
 }
 
 .social-wrapper {
@@ -32,7 +48,7 @@
   &__link {
     display: flex;
     align-items: center;
-    color: $grey-700;
+    color: var(--nav-link);
     font-size: 1.2vw;
     transition: opacity 400ms ease;
 
@@ -49,7 +65,7 @@
 
 .mobile-navigation {
   position: absolute;
-  top: 34%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
 
@@ -63,7 +79,7 @@
   }
 
   &__link {
-    color: $grey-800;
+    color: var(--nav-link);
     font-size: 6vw;
 
     @include for-phone-only() {

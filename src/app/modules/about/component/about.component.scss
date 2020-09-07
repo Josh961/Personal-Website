@@ -2,7 +2,7 @@
 @import 'abstracts/variables';
 
 .about-item {
-  color: $grey-800;
+  color: var(--header);
   margin-bottom: $md-4;
 
   &:last-child {
@@ -18,7 +18,7 @@
   }
 
   &__info {
-    color: $grey-700;
+    color: var(--text);
     font-size: $text-base;
     line-height: 1.5;
 

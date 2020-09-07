@@ -8,7 +8,7 @@
 
   &__image {
     transition: opacity 300ms ease;
-    border: 2px solid $grey-200;
+    border: 2px solid var(--subtle);
     border-radius: 6px;
     outline: none;
 
@@ -18,7 +18,7 @@
   }
 
   &__info {
-    color: $grey-700;
+    color: var(--text);
     font-size: $text-base;
     line-height: 1.5;
 
@@ -31,7 +31,7 @@
   &__link {
     position: relative;
     padding: 0 $sm-1;
-    color: $grey-800;
+    color: var(--header);
     font-size: $text-lg;
     outline: none;
 
@@ -47,11 +47,11 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      background: $blue-200;
+      background: var(--blue-accent);
     }
 
     &:hover, &:focus {
-      background: $blue-200;
+      background: var(--blue-accent);
     }
 
     &--large {

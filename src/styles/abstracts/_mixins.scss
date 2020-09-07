@@ -23,7 +23,7 @@
 }
 
 @mixin inputLabel {
-  color: $grey-900;
+  color: var(--accent);
   font-size: $text-sm;
 }
 
@@ -32,7 +32,7 @@
   width: 100%;
   margin: $sm-1 0;
   padding: $sm-3 $sm-3;
-  border: 1px solid $grey-300;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   overflow: initial;
 
@@ -50,7 +50,7 @@
   max-height: $lg-2;
   margin: $sm-1 0;
   padding: $sm-3 $sm-3;
-  border: 1px solid $grey-300;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   overflow: initial;
   resize: none;
