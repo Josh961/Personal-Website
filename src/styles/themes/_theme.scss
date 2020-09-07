@@ -1,0 +1,73 @@
+:root {
+  --grey-100: hsl(204, 45%, 98%);
+  --grey-200: hsl(210, 38%, 95%);
+  --grey-300: hsl(214, 32%, 91%);
+  --grey-400: hsl(211, 25%, 84%);
+  --grey-500: hsl(214, 20%, 69%);
+  --grey-600: hsl(216, 15%, 52%);
+  --grey-700: hsl(218, 17%, 35%);
+  --grey-800: hsl(218, 23%, 23%);
+  --grey-900: hsl(220, 26%, 14%);
+  --blue-100: hsl(201, 100%, 96%);
+  --blue-200: hsl(202, 81%, 86%);
+  --blue-300: hsl(203, 82%, 76%);
+  --blue-400: hsl(205, 79%, 66%);
+  --blue-500: hsl(207, 73%, 57%);
+  --blue-600: hsl(209, 62%, 50%);
+  --blue-700: hsl(211, 61%, 43%);
+  --blue-800: hsl(213, 49%, 34%);
+  --blue-900: hsl(215, 41%, 28%);
+  --solarized-base3: hsl(44, 87%, 94%);
+  --solarized-base2: hsl(46, 42%, 88%);
+  --solarized-base1: hsl(180, 7%, 60%);
+  --solarized-base0: hsl(186, 8%, 55%);
+  --solarized-base00: hsl(196, 13%, 45%);
+  --solarized-base01: hsl(194, 14%, 40%);
+  --solarized-base02: hsl(192, 81%, 14%);
+  --solarized-base03: hsl(192, 100%, 11%);
+}
+
+.light {
+  --bg: white;
+  --bg-nav: var(--grey-100);
+  --nav-link: var(--grey-700);
+  --nav-link-hover: var(--grey-900);
+  --header: var(--grey-800);
+  --text: var(--grey-700);
+  --subtle: var(--grey-200);
+  --accent: var(--grey-900);
+  --blue-accent: var(--blue-200);
+  --card-header: var(--blue-900);
+  --input-border: var(--grey-300);
+  --opposite: black;
+}
+
+.dark {
+  --bg: var(--grey-900);
+  --bg-nav: var(--grey-800);
+  --nav-link: var(--grey-300);
+  --nav-link-hover: var(--grey-100);
+  --header: var(--blue-100);
+  --text: var(--grey-100);
+  --subtle: var(--grey-700);
+  --accent: var(--grey-100);
+  --blue-accent: var(--blue-400);
+  --card-header: var(--blue-100);
+  --input-border: var(--grey-600);
+  --opposite: white;
+}
+
+.solarized {
+  --bg: var(--solarized-base3);
+  --bg-nav: var(--solarized-base2);
+  --nav-link: var(--solarized-base00);
+  --nav-link-hover: var(--solarized-base02);
+  --header: var(--solarized-base02);
+  --text: var(--solarized-base00);
+  --subtle: var(--solarized-base1);
+  --accent: var(--solarized-base01);
+  --blue-accent: var(--blue-200);
+  --card-header: var(--blue-900);
+  --input-border: var(--solarized-base0);
+  --opposite: var(--solarized-base02);
+}

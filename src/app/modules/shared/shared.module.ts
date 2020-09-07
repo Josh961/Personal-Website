@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
 
 @NgModule({
   imports: [
@@ -13,12 +14,14 @@ import { NavigationComponent } from './navigation/navigation.component';
   exports: [
     CardComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    ThemeSelectorComponent
   ],
   declarations: [
     CardComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    ThemeSelectorComponent
   ],
   providers: [],
 })
