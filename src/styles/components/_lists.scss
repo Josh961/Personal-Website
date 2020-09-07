@@ -6,7 +6,7 @@
   &__item {
     margin-bottom: $md-1;
     margin-left: $lg-2;
-    color: $grey-700;
+    color: var(--text);
     font-size: $text-base;
 
     @include for-tablet-portrait-up() {
@@ -17,7 +17,7 @@
       content: attr(data-label);
       position: absolute;
       left: $md-1;
-      color: $grey-800;
+      color: var(--header);
       font-weight: bold;
 
       @include for-tablet-portrait-up() {

@@ -18,7 +18,7 @@
   &__link {
     display: inline-flex;
     align-items: center;
-    color: $grey-700;
+    color: var(--nav-link);
     font-size: $text-xl;
     transition: opacity 400ms ease;
     transform: translateY(50%);
@@ -39,7 +39,7 @@
   }
 
   &__copyright {
-    color: $grey-700
+    color: var(--nav-link)
   }
 }
 

@@ -11,6 +11,12 @@
     <a class="navigation__link" [routerLink]="['/design']" routerLinkActive="navigation__link--selected">Design</a>
     <a class="navigation__link" [routerLink]="['/about']" routerLinkActive="navigation__link--selected">About</a>
     <a class="navigation__link" [routerLink]="['/contact']" routerLinkActive="navigation__link--selected">Contact</a>
+    <div class="dropdown-wrapper">
+      <button type="button" class="dropdown-wrapper__button"></button>
+      <div class="dropdown">
+        <app-theme-selector></app-theme-selector>
+      </div>
+    </div>
     <img class="navigation__menu-button" src="assets/images/menu.svg" alt="Menu" (click)="toggleMobileNavigation(true)">
   </div>
 </nav>
