@@ -8,6 +8,16 @@
   right: 0;
   background: transparent;
 
+  &--mobile {
+    flex-direction: row;
+    position: relative;
+    top: 0;
+
+    > .circle-button {
+      margin: 0 $sm-1;
+    }
+  }
+
   &__item:not(:last-child) {
     margin-bottom: $sm-2;
   }

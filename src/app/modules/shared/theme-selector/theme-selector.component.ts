@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Renderer2 } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme-service';
 
 @Component({
@@ -8,6 +8,7 @@ import { ThemeService } from 'src/app/services/theme-service';
 })
 
 export class ThemeSelectorComponent {
+  @Input() mobile = false;
   @Output() themeSelected = new EventEmitter<string>();
 
   constructor(
