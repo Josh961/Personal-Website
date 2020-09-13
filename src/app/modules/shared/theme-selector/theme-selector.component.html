@@ -1,4 +1,4 @@
-<div class="theme-selector">
+<div class="theme-selector" [ngClass]="{'theme-selector--mobile': mobile}">
   <button type="button" class="theme-selector__item circle-button circle-button--light" (click)="toggleTheme('light')"></button>
   <button type="button" class="theme-selector__item circle-button circle-button--dark" (click)="toggleTheme('dark')"></button>
   <button type="button" class="theme-selector__item circle-button circle-button--solarized" (click)="toggleTheme('solarized')"></button>
