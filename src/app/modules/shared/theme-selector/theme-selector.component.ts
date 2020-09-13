@@ -8,7 +8,7 @@ import { ThemeService } from 'src/app/services/theme-service';
 })
 
 export class ThemeSelectorComponent {
-  @Input() mobile = false;
+  @Input() desktop = false;
   @Output() themeSelected = new EventEmitter<string>();
 
   constructor(

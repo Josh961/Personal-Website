@@ -2,31 +2,24 @@
 
 .theme-selector {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 150%;
-  right: 0;
   background: transparent;
 
-  &--mobile {
-    flex-direction: row;
-    position: relative;
-    top: 0;
+  &--desktop {
+    flex-direction: column;
+    position: absolute;
+    top: 150%;
+    right: 0;
 
     > .circle-button {
-      margin: 0 $sm-1;
-      outline: none;
+      margin: 0 0 $sm-2 0;
     }
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: $sm-2;
   }
 }
 
 .circle-button {
   height: $md-2;
   width: $md-2;
+  margin: 0 $sm-1;
   border-radius: 50%;
   transition: color 100ms ease-in, background 100ms ease-in;
   cursor: pointer;
@@ -35,7 +28,7 @@
     background: $grey-100;
     border: 2px solid $grey-500;
 
-    &:hover {
+    .theme-selector--desktop > &:hover {
       background: $grey-200;
     }
   }
@@ -44,7 +37,7 @@
     background: $grey-800;
     border: 2px solid $grey-600;
 
-    &:hover {
+    .theme-selector--desktop > &:hover {
       background: $grey-900;
     }
   }
@@ -53,8 +46,12 @@
     background: $solarized-base3;
     border: 2px solid $solarized-base1;
 
-    &:hover {
+    .theme-selector--desktop > &:hover {
       background: $solarized-base2;
     }
   }
+}
+
+:not(.theme-selector--desktop) > .circle-button {
+  outline: none;
 }
