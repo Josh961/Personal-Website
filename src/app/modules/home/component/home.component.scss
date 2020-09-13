@@ -52,7 +52,7 @@
     font-size: 1.2vw;
     transition: opacity 400ms ease;
 
-    &:hover {
+    &:hover, &:focus {
       opacity: 0.6;
     }
   }
