@@ -79,18 +79,19 @@
   }
 
   &__line {
-    border: 4px solid;
+    height: $sm-2;
+    margin: $sm-1 0;
 
     &--blue {
-      color: $blue-200;
+      background: $blue-200;
     }
 
     &--pink {
-      color: $pink-200;
+      background: $pink-200;
     }
 
     &--green {
-      color: $green-200;
+      background: $green-200;
     }
   }
 }
