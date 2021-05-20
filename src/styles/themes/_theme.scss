@@ -39,6 +39,8 @@
   --blue-accent: var(--blue-200);
   --card-header: var(--blue-900);
   --input-border: var(--grey-300);
+  --input-background: white;
+  --input-color: black;
   --opposite: black;
 }
 
@@ -54,6 +56,8 @@
   --blue-accent: var(--blue-400);
   --card-header: var(--blue-100);
   --input-border: var(--grey-600);
+  --input-background: var(--grey-800);
+  --input-color: white;
   --opposite: white;
 }
 
@@ -69,5 +73,7 @@
   --blue-accent: var(--blue-200);
   --card-header: var(--blue-900);
   --input-border: var(--solarized-base0);
+  --input-background: var(--solarized-base2);
+  --input-color: black;
   --opposite: var(--solarized-base02);
 }

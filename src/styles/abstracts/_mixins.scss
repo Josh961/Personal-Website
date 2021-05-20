@@ -32,6 +32,8 @@
   width: 100%;
   margin: $sm-1 0;
   padding: $sm-3 $sm-3;
+  color: var(--input-color);
+  background-color: var(--input-background);
   border: 1px solid var(--input-border);
   border-radius: 6px;
   overflow: initial;
@@ -50,6 +52,8 @@
   max-height: $lg-2;
   margin: $sm-1 0;
   padding: $sm-3 $sm-3;
+  color: var(--input-color);
+  background-color: var(--input-background);
   border: 1px solid var(--input-border);
   border-radius: 6px;
   overflow: initial;
