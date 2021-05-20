@@ -11,7 +11,7 @@ import { ThemeService } from 'src/app/services/theme-service';
 
 export class HomeComponent implements OnDestroy, AfterViewInit {
   @ViewChild('home') home: ElementRef;
-  private ngUnsubscribe = new Subject();
+  private ngUnsubscribe = new Subject<void>();
 
   constructor(
     private renderer: Renderer2,
