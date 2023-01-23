@@ -33,9 +33,8 @@
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.11.18",
     "angular-cli-ghpages": "^1.0.5",
-    "codelyzer": "^0.0.28",
+    "codelyzer": "^6.0.2",
     "ts-node": "~10.9.1",
-    "tslint": "~6.1.0",
     "typescript": "~4.9.4"
   }
 }
